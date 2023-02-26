@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="uft-8"/>
+    <link rel="stylesheet" href="practice.css">
+    <title>Portfolio Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- NAVIGATION BAR then TITLE(name and description) then NAV again -->
+    <header>
+      <ul class="nav1">
+        <li class="link"><a href="#">Home</a></li>
+        <li class="link"><a href="#">Projects</a></li>
+      </ul>
+      <div class = "container">
+        <span class="name">Sarnaz</span>
+        <br>
+        <span class="text second"></span>
+      </div>
+      <ul class="nav2">
+        <li class="link"><a href="#about">About</a></li>
+        <li class="link"><a href="#final">Contact</a></li>
+      </ul>
+    </header>
+    <!-- NAVIGATION BAR DONE -->
+
+
+    <!-- Projects -->
+    <section id="timeline">
+        <div class="tl-item">
+          <div class="tl-bg" style="background-image: url(img/sleep.png)"></div>
+          <div class="tl-year">
+            <p class="f2 heading--sanSerif">#1</p>
+          </div>
+          <div class="tl-content">
+            <h1>Sleep Wise</h1>
+            <p>A desktop application to help university students improve the quality of their sleep. I learnt skills such as using an API, accessing and storing in a database and general frontend development to display graphical information. </p>
+            <p><a href = ""></a></p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-bg" style="background-image: url(img/SG.png)"></div>
+          <div class="tl-year">
+            <p class="f2 heading">#2</p>
+          </div>
+          <div class="tl-content">
+            <h1 class="f3 text--accent ttu">Smart Garden</h1>
+            <p>A system using an open-source microcontroller called Arduino UNO R3 that can work along with other open-source hardware to create optimal environment for crops to grow. I designing circuit layout and communication models.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-bg" style="background-image: url(img/port.png);"></div>
+          <div class="tl-year">
+            <p class="f2 heading">#3</p>
+          </div>
+          <div class="tl-content">
+            <h1 class="f3 text--accent ttu">Portfolio Website</h1>
+            <p>Created this website using HTML, CSS and Javascript. This includes hard coded animations and taught me the importance of code quality, issue of resizing and how different screen sizes affect functionality</p>
+          </div>
+        </div>
+      
+        <div class="tl-item">
+            <div class="tl-bg" style="background-image: url(img/map.webp)"></div>
+            <div class="tl-year">
+              <p class="f2 heading">#4</p>
+            </div>
+            <div class="tl-content">
+              <h1 class="f3 text--accent ttu">Campus Map</h1>
+              <p>I am currently in the process of creating an interactive University of Bath Campus map. Skill I am gaining are Android Development including Java and Kotlin, mapping features using Google Maps Api and OpenStreetMap and UI design</p>
+            </div>
+        </div>
+    </section>
+    <!-- Projects Done-->
+    <!-- About section -->
+    <a id = "about"></a>
+    <section id="about">
+      <div class = "about-wrapper">
+        <div class = "about-left">
+          <div class="about-left-content">
+            <div>
+              <div class = "shadow">
+                <div class = "about-img">
+                  <img src = "img/me.jpg" alt = "about image">
+                </div>
+              </div>
+            <h2>Sarnaz<br>Hossain</h2>
+            <h3>Student / looking for experience</h3>
+            </div>
+          </div>
+        </div>
+        <div class = "about-right">
+          <h1 class="hi">hello<span>!</span></h1>
+          <h2>Here's who I am & what I do,</h2>
+          <div class = "about-para">
+            <p>My name is Sarnaz Hossain and I am currently studying towards a degree in Computer Science. I would describe myself as a diligent individual who has an interest in influencing modern technology. Adaptability, 
+              analysis and clear communication are traits that I prioritise and strive to display continually</p>
+            <p>I am always looking for opportunities to improve myself and build new skills. Please do not hesitate to get in touch using the links provided below</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About section Done -->
+    
+    <!-- Useful links section-->
+    <a id = "final"></a>  
+    <section id="final">
+      <section id = "links">
+        <div class="button">
+          <a href="https://www.linkedin.com/in/sarnaz-hossain-4b3b30250/">
+            <div class ="icon">
+            <i class="fa-brands fa-linkedin-in"></i>
+            <span>LinkedIn</span>
+            </div>
+          </a>
+          <a href="https://github.com/sarnaz">
+            <div class ="icon">
+            <i class="fa-brands fa-github"></i>
+            <span>GitHub</span>
+            </div>
+          </a>
+          <a href="https://www.youtube.com/channel/UCmie1Yk5jsk1YHiwOyywy3Q">
+            <div class ="icon">
+            <i class="fa-brands fa-youtube"></i>
+            <span>Youtube</span>
+            </div>
+          </a>
+          <a href="">
+            <div class ="icon">
+            <i class="fa-brands fa-twitter"></i>
+            <span>Twitter</span>
+            </div>
+          </a>
+        </div>
+      </section>
+      <div class="form">
+        <form action="action_page.php">
+      
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="uk">United Kingdom</option>
+            <option value="usa">USA</option>
+            <option value="other">Other</option>
+          </select>
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input type="submit" value="Submit">
+      
+        </form>
+      </div>
+    </section>
+    <!-- Useful links section Done -->
+    
+    <script src="https://kit.fontawesome.com/800c40c002.js" crossorigin="anonymous"></script>
+    <script>  
+        const text = document.querySelector(".second");
+        const textLoad = () => {
+            setTimeout(() => {
+                text.textContent = "Software Developer";}, 0);
+            setTimeout(() => {
+                text.textContent = "Data Analyst";}, 6000);
+            setTimeout(() => {
+                text.textContent = "Problem Solver";}, 12000);
+        }
+        textLoad();
+        setInterval(textLoad, 18000);
+    </script>
+</body>
+</html>
