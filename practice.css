@@ -1,18 +1,13 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-body {
-    background-color: #111;
-    padding-top: 80px;
-    position: relative;
-    text-align: center;
-    justify-content: center;
-}
 /*Top of the page with name and links*/
+/*
 header{
   justify-content: center;
   align-items: flex-start;
@@ -27,21 +22,88 @@ header{
   background-color: #000f39;
   box-shadow: 10px 10px 8px #111;;
 }
+*/
+header {
+  background-color: #333;
+  padding: 0 15%;
+}
+.container1 {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-.link{
+.logo {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+
+.menu-toggle {
+  display: none;
+}
+.menu {
+  color: rgb(101, 158, 229);
+  font-size: 25px;
+  font-weight: 1000;
+  display: flex;
+  list-style: none;
+}
+.menu li {
+  margin-left: 25px;
+}
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+}
+.menu li a:hover {
+  color: #dd2d4a;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    display: none;
+  }
+  .menu-toggle button {
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .menu-toggle button:hover {
+    background-color: #ddd;
+  }
+
+  .menu.active {
+    display: block;
+  }
+}
+
+/*
+.link {
   list-style: none;
 }
 
-a{
+a {
   color: rgb(101, 158, 229);
   font-size: 1rem;
   font-weight: 1000;
   text-decoration: none;
 }
-a:hover{
+a:hover {
   color: #dd2d4a;
 }
-.nav1{
+.nav1 {
   width: 20%;
   display: flex;
   padding-top: 1rem;
@@ -51,7 +113,7 @@ a:hover{
   padding-left: 1rem;
 }
 
-.nav2{
+.nav2 {
   width: 20%;
   display: flex;
   padding-top: 1rem;
@@ -61,154 +123,159 @@ a:hover{
   padding-right: 1rem;
 }
 /*Name and disappearing description*/
-.container{
-    width: 50%;
-    position: relative;
-    height: 80px;
-    padding-top: 0.5rem;
+
+/*
+.container {
+  width: 50%;
+  position: relative;
+  height: 80px;
+  padding-top: 0.5rem;
 }
-.container .name{
-    position: relative;
-    color: #fff8de;
-    font-size: 30px;
-    font-weight: 1000;
+.container .name {
+  position: relative;
+  color: #fff8de;
+  font-size: 30px;
+  font-weight: 1000;
 }
 
-.container .text.second{
-    position: relative;
-    color: rgb(101, 158, 229);
-    font-size: 20px;
-    padding-top: 10px;
-    font-weight: 1000;
+.container .text.second {
+  position: relative;
+  color: rgb(101, 158, 229);
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 1000;
 }
 
-.text.second:before{
-    content: "";
-    position: absolute;
-    top: 10;
-    left: 0;
-    height: 80%;
-    width: 100%;
-    background-color: #000f39;
-    border-left: 2px solid rgb(101, 158, 229);
-    animation: animate 6s steps(18) infinite;
+.text.second:before {
+  content: "";
+  position: absolute;
+  top: 10;
+  left: 0;
+  height: 80%;
+  width: 100%;
+  background-color: #000f39;
+  border-left: 2px solid rgb(101, 158, 229);
+  animation: animate 6s steps(18) infinite;
 }
-@keyframes animate{
-    40%, 60%{
-        left: calc(100% + 4px);
-    }
-    100%{
-        left: 0%;
-    }
+@keyframes animate {
+  40%,
+  60% {
+    left: calc(100% + 4px);
+  }
+  100% {
+    left: 0%;
+  }
 }
 /*Start of the projects*/
+/*
 #timeline {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1rem;
-    display: flex;
-    background-color: #111;
-    padding-top: 20px;
-  }
-  #timeline:hover .tl-item {
-    width: 17%;
-  }
-  .tl-item {
-    transform: translate3d(0, 0, 0);
-    position: relative;
-    width: 25%;
-    height: 700px;
-    color: #fff8de;
-    transition: width 0.5s ease;
-  }
-  .tl-item:before, .tl-item:after {
-    transform: translate3d(0, 0, 0);
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .tl-item:after {
-    background: rgba(3, 22, 37, 0.85);
-    opacity: 1;
-    transition: opacity 0.5s ease;
-  }
-  .tl-item:before {
-    background: linear-gradient(to top , rgba(0, 0, 0, 0) 0%, #111 80%);
-    z-index: 1;
-    opacity: 0;
-    transform: translate3d(0, 0, 0) translateY(0%);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  .tl-item:hover {
-    width: 50% !important;
-  }
-  .tl-item:hover:after {
-    opacity: 0;
-  }
-  .tl-item:hover:before {
-    opacity: 1;
-    transform: translate3d(0, 0, 0) translateY(0);
-    transition: opacity 1s ease, transform 1s ease 0.25s;
-  }
-  .tl-item:hover .tl-content {
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.75s ease 0.5s;
-  }
-  .tl-item:hover .tl-bg {
-    filter: grayscale(30%);
-  }
-  .tl-content {
-    transform: translate3d(0, 0, 0) translateY(25px);
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    margin: 0 0.5em;
-    top: 20%;
-    opacity: 0;
-  }
-  .tl-content h1 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-transform: uppercase;
-    color: rgb(101, 158, 229);
-    text-decoration-line: underline;
-    font-size: 20px;
-    font-weight: normal;
-  }
-  .tl-year {
-    color: rgb(101, 158, 229);
-    text-decoration-color: white;
-    font-size: 25px;
-    font-weight: 100;
-    position: relative;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 1;
-  }
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1rem;
+  display: flex;
+  background-color: #111;
+  padding-top: 20px;
+}
+#timeline:hover .tl-item {
+  width: 17%;
+}
+.tl-item {
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  width: 25%;
+  height: 700px;
+  color: #fff8de;
+  transition: width 0.5s ease;
+}
+.tl-item:before,
+.tl-item:after {
+  transform: translate3d(0, 0, 0);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.tl-item:after {
+  background: rgba(3, 22, 37, 0.85);
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.tl-item:before {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, #111 80%);
+  z-index: 1;
+  opacity: 0;
+  transform: translate3d(0, 0, 0) translateY(0%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.tl-item:hover {
+  width: 50% !important;
+}
+.tl-item:hover:after {
+  opacity: 0;
+}
+.tl-item:hover:before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) translateY(0);
+  transition: opacity 1s ease, transform 1s ease 0.25s;
+}
+.tl-item:hover .tl-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.75s ease 0.5s;
+}
+.tl-item:hover .tl-bg {
+  filter: grayscale(30%);
+}
+.tl-content {
+  transform: translate3d(0, 0, 0) translateY(25px);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 0 0.5em;
+  top: 20%;
+  opacity: 0;
+}
+.tl-content h1 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-transform: uppercase;
+  color: rgb(101, 158, 229);
+  text-decoration-line: underline;
+  font-size: 20px;
+  font-weight: normal;
+}
+.tl-year {
+  color: rgb(101, 158, 229);
+  text-decoration-color: white;
+  font-size: 25px;
+  font-weight: 100;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+}
 
-  .tl-bg {
-    transform: translate3d(0, 0, 0);
-    position: absolute;
-    width: 100%;
-    height: 700px;
-    top: 0;
-    left: 0;
-    background-size: cover;
-    background-position: center;
-    transition: filter 0.5s ease;
-    filter: grayscale(100%);
-  }
+.tl-bg {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.5s ease;
+  filter: grayscale(100%);
+}
 
 /*about section including picture and description*/
-
-.about-wrapper{
+/*
+.about-wrapper {
   height: 1400px;
-  box-sizing: border-box ;
+  box-sizing: border-box;
 }
-.about-left{
+.about-left {
   background: #000f39;
   display: flex;
   flex-direction: column;
@@ -216,28 +283,28 @@ a:hover{
   justify-content: center;
   height: 700px;
 }
-.about-left-content > div{
-  background: #102b72;  
+.about-left-content > div {
+  background: #102b72;
   padding: 4rem 4rem 2.5rem 5rem;
   text-align: center;
 }
-.about-left-content{
+.about-left-content {
   box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
   -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
   -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
 }
-.about-img img{
+.about-img img {
   display: block;
   width: 200px;
 }
-.about-img{
+.about-img {
   width: 200px;
   height: 200px;
-  overflow:hidden;
+  overflow: hidden;
   border-radius: 50%;
   transition: all 0.5s ease-in-out;
 }
-.shadow{
+.shadow {
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
@@ -246,7 +313,7 @@ a:hover{
   position: relative;
   cursor: pointer;
 }
-.shadow::after{
+.shadow::after {
   content: "";
   position: absolute;
   background: rgba(0, 0, 0, 0.4);
@@ -260,13 +327,13 @@ a:hover{
   opacity: 0;
   transition: all 0.6s ease;
 }
-.shadow:hover .about-img{
+.shadow:hover .about-img {
   transform: translateY(-10px);
 }
-.shadow:hover::after{
+.shadow:hover::after {
   opacity: 1;
 }
-.about-left-content h2{
+.about-left-content h2 {
   font-size: 2rem;
   color: #fff8de;
   margin: 2.2rem 0 0.6rem 0;
@@ -274,14 +341,14 @@ a:hover{
   padding-bottom: 1rem;
   border-bottom: 2px solid #edffec;
 }
-.about-left-content h3{
+.about-left-content h3 {
   color: #fff8de;
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 5px;
   margin-top: 1.2rem;
 }
-.about-right{
+.about-right {
   background: #fff8de;
   height: 700px;
   display: flex;
@@ -291,39 +358,38 @@ a:hover{
   padding: 0 5rem;
   text-align: center;
 }
-.about-right h1{
+.about-right h1 {
   color: #001755;
   font-size: 7rem;
   text-transform: uppercase;
 }
-.about-right h1 span{
+.about-right h1 span {
   color: #dd2d4a;
 }
-.about-right h2{
+.about-right h2 {
   color: #001755;
   font-weight: 600;
 }
-.about-para p{
+.about-para p {
   font-weight: 300;
   padding: 0.5rem;
   opacity: 0.8;
   color: #001755;
 }
 
-#final{
+#final {
   display: flex;
   background-color: #111;
 }
 
-#links{
+#links {
   display: flex;
   align-items: center;
   justify-content: center;
   background: #111;
-  width:40%;
-  
+  width: 40%;
 }
-.icon{
+.icon {
   width: 100px;
   height: 100px;
   border-radius: 100px;
@@ -334,10 +400,10 @@ a:hover{
   line-height: 100px;
   font-family: sans-serif;
   overflow: hidden;
-  box-shadow: 5px 10px 20px rgba(150, 150, 150, .3);
-  transition: all .3s ease-out;
+  box-shadow: 5px 10px 20px rgba(150, 150, 150, 0.3);
+  transition: all 0.3s ease-out;
 }
-.icon:hover{
+.icon:hover {
   width: 150px;
   font-size: 25px;
   cursor: pointer;
@@ -347,47 +413,39 @@ a:hover{
   color: #001755;
 }
 
-.icon .fa-twitter{
-  color: #1DA1F2;
+.icon .fa-twitter {
+  color: #1da1f2;
 }
-.twt:hover{
-  background: #1DA1F2;
+.twt:hover {
+  background: #1da1f2;
 }
-.icon .fa-linkedin-in{
-  color: #0077B5;
+.icon .fa-linkedin-in {
+  color: #0077b5;
 }
-.lnk:hover{
-  background: #0077B5;
+.lnk:hover {
+  background: #0077b5;
 }
-.icon .fa-github{
+.icon .fa-github {
   color: #000;
 }
-.git:hover{
+.git:hover {
   background: #000;
 }
-.icon .fa-youtube{
-  color: #FE0000;
+.icon .fa-youtube {
+  color: #fe0000;
 }
-.yt:hover{
-  background: #FE0000;
+.yt:hover {
+  background: #fe0000;
 }
-.icon a{
-  all:revert;
+.icon a {
+  all: revert;
 }
 
-input[type=text], select, textarea {
-  width: 100%; /* Full width */
-  padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  margin-top: 6px; /* Add a top margin */
-  margin-bottom: 16px; /* Bottom margin */
-  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
-}
+
 
 /* Style the submit button with a specific background color etc */
-input[type=submit] {
+/*
+input[type="submit"] {
   background-color: #dd2d4a;
   color: white;
   padding: 12px 20px;
@@ -397,52 +455,54 @@ input[type=submit] {
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
+/*
+input[type="submit"]:hover {
   background-color: #dd2d4a;
 }
 
 /* Add a background color and some padding around the form */
+/*
 .form {
   border-radius: 5px;
   color: #fff8de;
-  width:60%;
+  width: 60%;
   padding: 2rem;
   font-size: 20px;
   align-items: center;
 }
 
-@media screen and (min-width: 992px){
-  body{
+@media screen and (min-width: 992px) {
+  body {
     padding-top: 125px;
   }
-  a{
+  a {
     font-size: 2rem;
   }
-  .nav1{
+  .nav1 {
     width: 25%;
-    gap:5rem;
-  }  
-  .nav2{
+    gap: 5rem;
+  }
+  .nav2 {
     width: 25%;
-    gap:5rem;
-  }  
-  .container{
+    gap: 5rem;
+  }
+  .container {
     height: 125px;
     padding-top: 0px;
   }
-  .container .name{
+  .container .name {
     font-size: 3.5rem;
     padding-top: 0;
-  }  
-  .container .text.second{
+  }
+  .container .text.second {
     font-size: 2.5rem;
     padding-top: 0px;
   }
-  .text.second:before{
-    top:0;
+  .text.second:before {
+    top: 0;
     height: 100%;
   }
-  #timeline{
+  #timeline {
     font-size: 1.3rem;
     padding-top: 1rem;
   }
@@ -460,26 +520,26 @@ input[type=submit]:hover {
     font-size: 2.5rem;
     text-decoration-line: none;
   }
-  .about-wrapper{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      height: 700px;
+  .about-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 700px;
   }
-  .about-left{
-      position: relative;
+  .about-left {
+    position: relative;
   }
-  .about-left-content{
-      position: absolute;
-      right: -50px;
+  .about-left-content {
+    position: absolute;
+    right: -50px;
   }
-  .icon:hover{
+  .icon:hover {
     width: 400px;
     font-size: 50px;
   }
-  #links{
+  #links {
     width: 50%;
   }
-  .form{
+  .form {
     width: 50%;
     font-size: 2rem;
   }
