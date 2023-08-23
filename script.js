@@ -1,19 +1,14 @@
-/*
-const text = document.querySelector(".second");
+const descriptions = ["Software Developer", "Data Analyst", "Problem Solver"];
+const text = document.querySelector(".text");
+let currentIndex = 0;
+
 const textLoad = () => {
-  setTimeout(() => {
-    text.textContent = "Software Developer";
-  }, 0);
-  setTimeout(() => {
-    text.textContent = "Data Analyst";
-  }, 6000);
-  setTimeout(() => {
-    text.textContent = "Problem Solver";
-  }, 12000);
+  text.textContent = descriptions[currentIndex];
+  currentIndex = (currentIndex + 1) % descriptions.length;
 };
+
 textLoad();
-setInterval(textLoad, 18000);
-*/
+setInterval(textLoad, 6000);
 // Navigation menu code
 const toggleButton = document.getElementById("toggleNav");
 const menu = document.getElementById("mainNav");
