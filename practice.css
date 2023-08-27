@@ -6,29 +6,13 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/*Top of the page with name and links*/
-/*
-header{
-  justify-content: center;
-  align-items: flex-start;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  display:  flex;
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-right: 10px;
-  z-index: 1;
-  background-color: #000f39;
-  box-shadow: 10px 10px 8px #111;;
-}
-*/
 header {
   background-color: #000f39;
   padding: 1% 17.5%;
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 1000;
 }
 .container1 {
   padding: 20px 0;
@@ -157,10 +141,77 @@ header {
 }
 
 .image img {
+  scale: 1.1;
   max-width: 100%;
   max-height: 100%;
   border-radius: 50% 40%;
 }
+
+.about-container {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 17.5%; /* Adjust the padding as needed */
+}
+
+.image-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.floating-image {
+  position: absolute;
+  max-height: 40vh;
+  border-radius: 10px;
+}
+.floating-image:hover {
+  transform: scale(1.1);
+}
+.top-right {
+  bottom: -50px; /* Adjust as needed */
+  right: 5%; /* Adjust as needed */
+  margin: 10px; /* Adjust overlap as needed */
+}
+
+.bottom-left {
+  top: -50px; /* Adjust as needed */
+  left: 5%; /* Adjust as needed */
+  margin: 10px; /* Adjust overlap as needed */
+}
+.text-container {
+  flex:1;
+  margin-top: 120px; /* Adjust as needed */
+  padding: 40px;
+}
+.text-container h2 {
+  margin-bottom: 20px;
+  color: #000f39;
+}
+
+.text-container p {
+  font-size: 18px;
+  margin: 10px 0;
+  line-height: 1.4;
+  letter-spacing: 0.8px;
+}
+
+
+.info-container {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.info-container h3 {
+  margin-top: 10px;
+}
+
+
+
 
 
 @media (max-width: 768px) {
