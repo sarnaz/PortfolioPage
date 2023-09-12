@@ -1,177 +1,346 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="uft-8"/>
-    <link rel="stylesheet" href="practice.css">
+  <head>
+    <meta charset="uft-8" />
+    <link rel="stylesheet" href="practice.css" />
     <title>Portfolio Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
     <!-- NAVIGATION BAR then TITLE(name and description) then NAV again -->
+    <header>
+      <nav>
+        <div class="container1">
+          <a class="logo" href="#">My logo</a>
+          <div class="menu-toggle">
+            <button id="toggleNav">NAV</button>
+          </div>
+          <ul class="menu" id="mainNav">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!----
     <header>
       <ul class="nav1">
         <li class="link"><a href="#">Home</a></li>
         <li class="link"><a href="#">Projects</a></li>
       </ul>
-      <div class = "container">
+      <div class="container">
         <span class="name">Sarnaz</span>
-        <br>
+        <br />
         <span class="text second"></span>
       </div>
       <ul class="nav2">
         <li class="link"><a href="#about">About</a></li>
         <li class="link"><a href="#final">Contact</a></li>
       </ul>
-    </header>
+    </header>-->
     <!-- NAVIGATION BAR DONE -->
-
-
-    <!-- Projects -->
-    <section id="timeline">
-        <div class="tl-item">
-          <div class="tl-bg" style="background-image: url(img/sleep.png)"></div>
-          <div class="tl-year">
-            <p class="f2 heading--sanSerif">#1</p>
-          </div>
-          <div class="tl-content">
-            <h1>Sleep Wise</h1>
-            <p>A desktop application to help university students improve the quality of their sleep. I learnt skills such as using an API, accessing and storing in a database and general frontend development to display graphical information. </p>
-            <p><a href = ""></a></p>
-          </div>
+    <!--HOME section-->
+    <div class="home">
+      <div class="name">
+        <h1>Hello, I'm</h1>
+        <h2>Sarnaz <span>Hossain</span></h2>
+        <div class="typing-animation">
+          <span class="text">Software Developer</span>
         </div>
-        <div class="tl-item">
-          <div class="tl-bg" style="background-image: url(img/SG.png)"></div>
-          <div class="tl-year">
-            <p class="f2 heading">#2</p>
-          </div>
-          <div class="tl-content">
-            <h1 class="f3 text--accent ttu">Smart Garden</h1>
-            <p>A system using an open-source microcontroller called Arduino UNO R3 that can work along with other open-source hardware to create optimal environment for crops to grow. I designing circuit layout and communication models.</p>
-          </div>
+        <div class="buttons">
+          <a href="#" class="hire-button">HIRE ME</a>
+          <a href="#" class="portfolio-button">VIEW MY PORTFOLIO</a>
         </div>
-        <div class="tl-item">
-          <div class="tl-bg" style="background-image: url(img/port.png);"></div>
-          <div class="tl-year">
-            <p class="f2 heading">#3</p>
-          </div>
-          <div class="tl-content">
-            <h1 class="f3 text--accent ttu">Portfolio Website</h1>
-            <p>Created this website using HTML, CSS and Javascript. This includes hard coded animations and taught me the importance of code quality, issue of resizing and how different screen sizes affect functionality</p>
-          </div>
-        </div>
-      
-        <div class="tl-item">
-            <div class="tl-bg" style="background-image: url(img/map.webp)"></div>
-            <div class="tl-year">
-              <p class="f2 heading">#4</p>
-            </div>
-            <div class="tl-content">
-              <h1 class="f3 text--accent ttu">Campus Map</h1>
-              <p>I am currently in the process of creating an interactive University of Bath Campus map. Skill I am gaining are Android Development including Java and Kotlin, mapping features using Google Maps Api and OpenStreetMap and UI design</p>
-            </div>
-        </div>
-    </section>
-    <!-- Projects Done-->
+      </div>
+      <div class="home-image">
+        <img src="img/me.jpg" alt="My Photo" />
+      </div>
+    </div>
     <!-- About section -->
-    <a id = "about"></a>
     <section id="about">
-      <div class = "about-wrapper">
-        <div class = "about-left">
-          <div class="about-left-content">
-            <div>
-              <div class = "shadow">
-                <div class = "about-img">
-                  <img src = "img/me.jpg" alt = "about image">
-                </div>
-              </div>
-            <h2>Sarnaz<br>Hossain</h2>
-            <h3>Student / looking for experience</h3>
-            </div>
-          </div>
+      <div class="about-container">
+        <div class="image-container">
+          <img
+            src="img/SG.png"
+            alt="Image 1"
+            class="floating-image top-right"
+          />
+          <img
+            src="img/SG.png"
+            alt="Image 2"
+            class="floating-image bottom-left"
+          />
         </div>
-        <div class = "about-right">
-          <h1 class="hi">hello<span>!</span></h1>
-          <h2>Here's who I am & what I do,</h2>
-          <div class = "about-para">
-            <p>My name is Sarnaz Hossain and I am currently studying towards a degree in Computer Science. I would describe myself as a diligent individual who has an interest in influencing modern technology. Adaptability, 
-              analysis and clear communication are traits that I prioritise and strive to display continually</p>
-            <p>I am always looking for opportunities to improve myself and build new skills. Please do not hesitate to get in touch using the links provided below</p>
+        <div class="text-container">
+          <h2>About Me</h2>
+          <p>
+            Hi. I am final year student currently studying towards a degree in
+            Computer Science. I would describe myself as a diligent individual
+            who has an interest in influencing modern technology. Adaptability,
+            analysis and clear communication are traits that I prioritise and
+            strive to display continually<br /><br />I love presenting and
+            explaining my ideas which can be evident in the experiences that i
+            have. To first provide value, then abtain it is a core belief that i
+            hope to convey.
+          </p>
+          <div class="info-container">
+            <div class="info">
+              <h3>Name</h3>
+              <p>Sarnaz Hossain</p>
+            </div>
+            <div class="info">
+              <h3>Email</h3>
+              <p>sarnaz.hossain21@gmail.com</p>
+            </div>
+            <div class="info">
+              <h3>Education</h3>
+              <p>University of Bath</p>
+            </div>
+            <div class="info">
+              <h3>Employment</h3>
+              <p>Open</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <section id="portsection">
+      <h1 class="portfolio-title">Portfolio</h1>
+      <div class="portfolio">
+        <div class="project">
+          <div class="project-static">
+            <img src="img/sleep.png" alt="Project 1" />
+            <h3>SleepWise</h3>
+            <div class="project-buttons">
+              <a href="project1-source-code-link" class="project-button"
+                >Source Code</a
+              >
+              <a href="project1-live-demo-link" class="project-button"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+          <div class="project-hover">
+            <div class="project-description">
+              A desktop application to help university students improve the
+              quality of their sleep. I learnt skills such as using an API,
+              accessing and storing in a database and general frontend
+              development to display graphical information.
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-static">
+            <img src="img/sleep.png" alt="Project 2" />
+            <h3>Project 2</h3>
+            <div class="project-buttons">
+              <a href="project2-source-code-link" class="project-button"
+                >Source Code</a
+              >
+              <a href="project2-live-demo-link" class="project-button"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+          <div class="project-hover">
+            <div class="project-description">
+              Short description of Project 2. This is some additional
+              information about the project.
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-static">
+            <img src="img/sleep.png" alt="Project 3" />
+            <h3>Project 3</h3>
+            <div class="project-buttons">
+              <a href="project3-source-code-link" class="project-button"
+                >Source Code</a
+              >
+              <a href="project3-live-demo-link" class="project-button"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+          <div class="project-hover">
+            <div class="project-description">
+              Short description of Project 3. This is some additional
+              information about the project.
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-static">
+            <img src="img/sleep.png" alt="Project 4" />
+            <h3>Project 4</h3>
+            <div class="project-buttons">
+              <a href="project4-source-code-link" class="project-button"
+                >Source Code</a
+              >
+              <a href="project4-live-demo-link" class="project-button"
+                >Live Demo</a
+              >
+            </div>
+          </div>
+          <div class="project-hover">
+            <div class="project-description">
+              Short description of Project 4. This is some additional
+              information about the project.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--
+    <a id="about"></a>
+    <section id="about">
+      <div class="about-wrapper">
+        <div class="about-left">
+          <div class="about-left-content">
+            <div>
+              <div class="shadow">
+                <div class="about-img">
+                  <img src="img/me.jpg" alt="about image" />
+                </div>
+              </div>
+              <h2>Sarnaz<br />Hossain</h2>
+              <h3>Student / looking for experience</h3>
+            </div>
+          </div>
+        </div>
+        <div class="about-right">
+          <h1 class="hi">hello<span>!</span></h1>
+          <h2>Here's who I am & what I do,</h2>
+          <div class="about-para">
+            <p>
+              My name is Sarnaz Hossain and I am currently studying towards a
+              degree in Computer Science. I would describe myself as a diligent
+              individual who has an interest in influencing modern technology.
+              Adaptability, analysis and clear communication are traits that I
+              prioritise and strive to display continually
+            </p>
+            <p>
+              I am always looking for opportunities to improve myself and build
+              new skills. Please do not hesitate to get in touch using the links
+              provided below
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
     <!-- About section Done -->
-    
+
+    <!-- Projects 
+    <section id="timeline">
+      <div class="tl-item">
+        <div class="tl-bg" style="background-image: url(img/sleep.png)"></div>
+        <div class="tl-year">
+          <p class="f2 heading--sanSerif">#1</p>
+        </div>
+        <div class="tl-content">
+          <h1>Sleep Wise</h1>
+          <p>
+            A desktop application to help university students improve the
+            quality of their sleep. I learnt skills such as using an API,
+            accessing and storing in a database and general frontend development
+            to display graphical information.
+          </p>
+          <p><a href=""></a></p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-bg" style="background-image: url(img/SG.png)"></div>
+        <div class="tl-year">
+          <p class="f2 heading">#2</p>
+        </div>
+        <div class="tl-content">
+          <h1 class="f3 text--accent ttu">Smart Garden</h1>
+          <p>
+            A system using an open-source microcontroller called Arduino UNO R3
+            that can work along with other open-source hardware to create
+            optimal environment for crops to grow. I designing circuit layout
+            and communication models.
+          </p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-bg" style="background-image: url(img/port.png)"></div>
+        <div class="tl-year">
+          <p class="f2 heading">#3</p>
+        </div>
+        <div class="tl-content">
+          <h1 class="f3 text--accent ttu">Portfolio Website</h1>
+          <p>
+            Created this website using HTML, CSS and Javascript. This includes
+            hard coded animations and taught me the importance of code quality,
+            issue of resizing and how different screen sizes affect
+            functionality
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-bg" style="background-image: url(img/map.webp)"></div>
+        <div class="tl-year">
+          <p class="f2 heading">#4</p>
+        </div>
+        <div class="tl-content">
+          <h1 class="f3 text--accent ttu">Campus Map</h1>
+          <p>
+            I am currently in the process of creating an interactive University
+            of Bath Campus map. Skill I am gaining are Android Development
+            including Java and Kotlin, mapping features using Google Maps Api
+            and OpenStreetMap and UI design
+          </p>
+        </div>
+      </div>
+    </section>
+    Projects Done-->
+
     <!-- Useful links section-->
-    <a id = "final"></a>  
+    <a id="final"></a>
     <section id="final">
-      <section id = "links">
+      <section id="links">
         <div class="button">
           <a href="https://www.linkedin.com/in/sarnaz-hossain-4b3b30250/">
-            <div class ="icon">
-            <i class="fa-brands fa-linkedin-in"></i>
-            <span>LinkedIn</span>
+            <div class="icon">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span>LinkedIn</span>
             </div>
           </a>
           <a href="https://github.com/sarnaz">
-            <div class ="icon">
-            <i class="fa-brands fa-github"></i>
-            <span>GitHub</span>
+            <div class="icon">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
             </div>
           </a>
           <a href="https://www.youtube.com/channel/UCmie1Yk5jsk1YHiwOyywy3Q">
-            <div class ="icon">
-            <i class="fa-brands fa-youtube"></i>
-            <span>Youtube</span>
+            <div class="icon">
+              <i class="fa-brands fa-youtube"></i>
+              <span>Youtube</span>
             </div>
           </a>
           <a href="">
-            <div class ="icon">
-            <i class="fa-brands fa-twitter"></i>
-            <span>Twitter</span>
+            <div class="icon">
+              <i class="fa-brands fa-twitter"></i>
+              <span>Twitter</span>
             </div>
           </a>
         </div>
       </section>
-      <div class="form">
-        <form action="action_page.php">
-      
-          <label for="fname">First Name</label>
-          <input type="text" id="fname" name="firstname" placeholder="Your name..">
-      
-          <label for="lname">Last Name</label>
-          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-      
-          <label for="country">Country</label>
-          <select id="country" name="country">
-            <option value="uk">United Kingdom</option>
-            <option value="usa">USA</option>
-            <option value="other">Other</option>
-          </select>
-      
-          <label for="subject">Subject</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-      
-          <input type="submit" value="Submit">
-      
-        </form>
-      </div>
-    </section>
     <!-- Useful links section Done -->
-    
-    <script src="https://kit.fontawesome.com/800c40c002.js" crossorigin="anonymous"></script>
-    <script>  
-        const text = document.querySelector(".second");
-        const textLoad = () => {
-            setTimeout(() => {
-                text.textContent = "Software Developer";}, 0);
-            setTimeout(() => {
-                text.textContent = "Data Analyst";}, 6000);
-            setTimeout(() => {
-                text.textContent = "Problem Solver";}, 12000);
-        }
-        textLoad();
-        setInterval(textLoad, 18000);
-    </script>
-</body>
+
+    <script
+      src="https://kit.fontawesome.com/800c40c002.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
