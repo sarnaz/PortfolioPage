@@ -6,6 +6,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/*
+Nav bar
+*/
+
 header {
   background-color: #000f39;
   padding: 1% 17.5%;
@@ -48,6 +52,11 @@ header {
 .menu li a:hover {
   color: #dd2d4a;
 }
+
+/*
+Home
+*/
+
 .home {
   padding: 0 17.5%;
   display: flex;
@@ -57,7 +66,7 @@ header {
   height: 100vh; 
 }
 .name {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,7 +79,7 @@ header {
 }
 .name h2 {
   color: #fff;
-  font-size: 66px;
+  font-size: 60px;
   margin-bottom: 35px;
 }
 .name h2 span{
@@ -133,26 +142,30 @@ header {
   text-decoration: none;
   border-radius: 5px;
 }
-.image {
-  width: 60%;
+.home-image {
+  width: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.image img {
+.home-image img {
   scale: 1.1;
   max-width: 100%;
   max-height: 100%;
   border-radius: 50% 40%;
 }
 
+/*
+About
+*/
+
 .about-container {
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: start;
-  padding: 0 17.5%; /* Adjust the padding as needed */
+  padding: 0 17.5%;
 }
 
 .image-container {
@@ -171,33 +184,33 @@ header {
   transform: scale(1.1);
 }
 .top-right {
-  bottom: -50px; /* Adjust as needed */
-  right: 5%; /* Adjust as needed */
-  margin: 10px; /* Adjust overlap as needed */
+  bottom: -50px; 
+  right: 5%; 
+  margin: 10px; 
 }
 
 .bottom-left {
-  top: -50px; /* Adjust as needed */
-  left: 5%; /* Adjust as needed */
-  margin: 10px; /* Adjust overlap as needed */
+  top: -50px;
+  left: 5%;
+  margin: 10px; 
 }
 .text-container {
   flex:1;
-  margin-top: 120px; /* Adjust as needed */
-  padding: 40px;
+  margin-top: 20px;
+  padding: 20px;
 }
+
 .text-container h2 {
   margin-bottom: 20px;
   color: #000f39;
 }
 
 .text-container p {
-  font-size: 18px;
+  font-size: 16px;
   margin: 10px 0;
   line-height: 1.4;
   letter-spacing: 0.8px;
 }
-
 
 .info-container {
   padding-top: 20px;
@@ -210,7 +223,112 @@ header {
   margin-top: 10px;
 }
 
+/*
+Portfolio
+*/
+#portsection {
+  background: linear-gradient(-45deg, #000f39, #6d7da8, #1d3169, #010103);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  padding: 50px 17.5%;
+  text-align: center;
+}
+.portfolio-title {
+  color: white; 
+  font-size: 3em;
+  padding-top: 10px;
+  padding-bottom: 50px;
+}
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-content: center;
+  
+}
 
+.project {
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.project img,
+.project h3 {
+  z-index: 1;
+  position: relative;
+}
+
+.project img {
+  max-width: 100%;
+  max-height: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.project:hover img{
+  opacity: 0.3; 
+}
+
+.project-static {
+  z-index: 1;
+  position: relative;
+}
+
+.project h3{
+  font-size: 1.5em;
+
+}
+
+.project-buttons {
+  margin-top: 15px;
+  z-index: 3;
+  position: relative;
+}
+
+.project-button {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.project-button:hover {
+  background-color: #0056b3;
+}
+
+.project-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project:hover .project-hover {
+  opacity: 1;
+}
+
+.project-description {
+  font-size: 18px;
+  padding: 10px;
+  color: #fff;
+  z-index: 2; 
+}
 
 
 
@@ -256,11 +374,49 @@ header {
   .typing-animation .text {
     font-size: 35px;
   }
-  .image{
+  .buttons {
+    margin-top: 20px;
+  }
+  .home-image{
     padding-top: 20px ;
     width: 100%;
     height: 30vh;
   }
+
+
+  .about-container {
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 17.5%;
+    flex-direction: column;
+  }
+  .image-container {
+    width: 100%;
+    display: grid;
+  }
+
+  .floating-image {
+    max-height: 100%; /* Ensure images fit within their grid cells */
+    border-radius: 10px;
+  }
+
+  .top-right,
+  .bottom-left {
+    display: none; /* Hide position-specific styles on smaller screens */
+  }
+  .text-container{
+    width: 100%;
+    overflow:auto;
+  }
+
+  .portfolio {
+    grid-template-columns: repeat(1, 1fr); /* Display one project per line on smaller screens */
+    gap: 40px; /* Adjust gap for spacing between projects */
+  }
+
+
+
 }
 /*
 .link {
@@ -549,7 +705,7 @@ a:hover {
   opacity: 0.8;
   color: #001755;
 }
-
+*/
 #final {
   display: flex;
   background-color: #111;
@@ -615,35 +771,7 @@ a:hover {
 }
 
 
-
-/* Style the submit button with a specific background color etc */
 /*
-input[type="submit"] {
-  background-color: #dd2d4a;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* When moving the mouse over the submit button, add a darker green color */
-/*
-input[type="submit"]:hover {
-  background-color: #dd2d4a;
-}
-
-/* Add a background color and some padding around the form */
-/*
-.form {
-  border-radius: 5px;
-  color: #fff8de;
-  width: 60%;
-  padding: 2rem;
-  font-size: 20px;
-  align-items: center;
-}
-
 @media screen and (min-width: 992px) {
   body {
     padding-top: 125px;
