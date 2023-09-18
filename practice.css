@@ -73,21 +73,21 @@ Home
   align-items: flex-start; 
 }
 .name h1 {
-  font-size: 35px;
+  font-size: 2rem;
   color: #fff;
   margin-bottom: 10px;
 }
 .name h2 {
   color: #fff;
-  font-size: 60px;
-  margin-bottom: 35px;
+  font-size: 4rem;
+  margin-bottom: 1rem;
 }
 .name h2 span{
   color: #000f39;
 }
 .typing-animation .text {
   overflow: hidden;
-  font-size: 45px;
+  font-size: 3rem;
   color: #fff;
   border-right: .15em solid rgb(254, 218, 142);
   white-space: nowrap;
@@ -268,7 +268,7 @@ Portfolio
   max-height: 300px;
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .project:hover img{
